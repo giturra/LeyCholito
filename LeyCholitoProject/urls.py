@@ -20,7 +20,9 @@ from LeyCholitoProject import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('naturalUser.urls'))
+    path('', include('naturalUser.urls')),
+    path('municipaplidad', include('municipality.urls')),
+    path('ong', include('ONG.urls'))
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
