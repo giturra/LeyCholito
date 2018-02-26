@@ -15,3 +15,4 @@ class LoginView(TemplateView):
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
 
+# TODO cambiar atributo body del template login
