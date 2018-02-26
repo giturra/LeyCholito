@@ -9,3 +9,9 @@ class IndexView(TemplateView):
         return render(request, self.template_name)
 
 
+class LoginView(TemplateView):
+    template_name = 'naturalUser/login.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)
+
