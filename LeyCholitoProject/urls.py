@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('naturalUser.urls')),
     path('municipaplidad', include('municipality.urls')),
-    path('ong', include('ONG.urls'))
+    path('ong', include('ONG.urls')),
+    path('denuncias', include('complaint.urls'))
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -2,7 +2,9 @@
 {% load static %}
 {% block title %} Ley Cholito {% endblock %}
 {% block content %}
-
+    {% autoescape off %}
+        {% block body_class %} hold-transition login-page {% endblock %}
+    {% endautoescape %}
     <div class="login-box">
         <div class="login-logo">
             <strong>Cholito</strong>
