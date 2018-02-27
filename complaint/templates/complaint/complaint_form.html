@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Ley Cholito {% endblock %}
+{% block content %}
+
+    <div class="login-box">
+        <div class="login-logo">
+            <strong>Cholito</strong>
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">
+                Ingresa tu email y contraseña para ingresar.
+            </p>
+
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                {{ form.state }}
+            </form>
+
+            <a href="#">Olvidé mi contraseña.</a><br>
+
+            <br>
+
+            <div>
+                <a href="#" class="btn btn-success btn-block btn-flat">Regístrate</a>
+            </div>
+
+        </div>
+        <!-- /.login-box-body -->
+
+        <br>
+
+    </div>
+    <!-- /.login-box -->
+
+    <!-- jQuery 3 -->
+    <script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- iCheck -->
+    <script src="{% static 'plugins/iCheck/icheck.min.js' %}" ></script>
+    <script>
+        $(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue',
+                increaseArea: '20%' // optional
+            });
+        });
+    </script>
+{% endblock %}
