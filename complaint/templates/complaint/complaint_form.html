@@ -9,23 +9,17 @@
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
-            <p class="login-box-msg">
-                Ingresa tu email y contraseña para ingresar.
-            </p>
 
-            <form action="" method="post">
+
+            <form class="form-control" action="" method="post">
                 {% csrf_token %}
-                {{ form }}
-                {{ form.state }}
+                {% for field  in form %}
+                    <div class="form-group">
+                    {{ field.label_tag }} {{ field }}
+                    </div>
+                {% endfor %}
             </form>
 
-            <a href="#">Olvidé mi contraseña.</a><br>
-
-            <br>
-
-            <div>
-                <a href="#" class="btn btn-success btn-block btn-flat">Regístrate</a>
-            </div>
 
         </div>
         <!-- /.login-box-body -->
